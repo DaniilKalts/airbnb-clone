@@ -5,7 +5,7 @@ import { signIn } from 'next-auth/react';
 import axios from "axios";
 import { AiFillGithub } from 'react-icons/ai';
 import { FcGoogle } from 'react-icons/fc';
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import {
     FieldValues,
     SubmitHandler,
@@ -59,6 +59,11 @@ const RegisterModal = () => {
       setIsLoading(false);
     })
   }
+
+  const toggle = useCallback(() => {
+    registerModal.onClose();
+    loginModal.onOpen();
+  }, [loginModal, registerModal]);
 
   const bodyContent = (
     <div className="flex flex-col gap-4">
@@ -115,10 +120,7 @@ const RegisterModal = () => {
             Already have an account?
           </div>
           <div
-            onClick={() => {
-              registerModal.onClose();
-              loginModal.onOpen();
-            }}
+            onClick={toggle}
             className="text-neutral-800 cursor-pointer hover:underline"
           >
             Log in
