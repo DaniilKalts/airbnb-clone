@@ -58,3 +58,10 @@ body,
     background: #e5e5e5; 
     border-radius: 10px;
 }
+
+.leaflet-bottom,
+.leaflet-control,
+.leaflet-pane,
+.leaflet-top {
+    z-index: 0 !important;
+}
