@@ -12,7 +12,7 @@ import { SafeUser } from '@/app/types';
 import useRentModal from '@/app/hooks/useRentModal';
 
 interface UserMenuProps {
-    currentUser?: SafeUser | null
+    currentUser?: SafeUser | null;
 }
 
 const UserMenu: React.FC<UserMenuProps> = ({

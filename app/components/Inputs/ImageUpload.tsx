@@ -10,8 +10,8 @@ declare global {
 }
 
 interface ImageUploadProps {
-    onChange: (value: string) => void,
-    value: string
+    onChange: (value: string) => void;
+    value: string;
 }
 
 const ImageUpload: React.FC<ImageUploadProps> = ({

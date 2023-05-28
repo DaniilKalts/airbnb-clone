@@ -6,9 +6,9 @@ import { IconType } from "react-icons";
 import qs from 'query-string';
 
 interface CategoryBoxProps {
-    icon: IconType,
-    label: string,
-    selected?: boolean
+    icon: IconType;
+    label: string;
+    selected?: boolean;
 }
 
 const CategoryBox: React.FC<CategoryBoxProps> = ({
