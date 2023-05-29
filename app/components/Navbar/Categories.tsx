@@ -135,8 +135,8 @@ const Categories = () => {
                 },
             }}
             slidesPerView={3}
-            navigation={true} 
-            modules={[Navigation]} 
+            // navigation={true} 
+            // modules={[Navigation]} 
             className="mySwiper pt-4"
         >
             {categories.map((item) => (

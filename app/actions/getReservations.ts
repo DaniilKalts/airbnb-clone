@@ -3,7 +3,7 @@ import prisma from "@/app/libs/prismadb";
 interface IParams {
     listingId?: string;
     userId?: string;
-    authorId?: string
+    authorId?: string;
 }
 
 export default async function getReservations(params : IParams) {
@@ -21,7 +21,7 @@ export default async function getReservations(params : IParams) {
         }
 
         if (authorId) {
-            query.listingId = {
+            query.listing = {
                 userId: authorId
             };
         }
